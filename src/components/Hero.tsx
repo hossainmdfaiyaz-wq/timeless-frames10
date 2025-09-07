@@ -1,9 +1,7 @@
 import { ArrowDown, Camera } from 'lucide-react';
 import profilePicture from '@/assets/profile-picture.jpg';
-
 const Hero = () => {
-  return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
+  return <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
       {/* Background gradient elements */}
       <div className="absolute inset-0 opacity-20">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-accent rounded-full blur-3xl"></div>
@@ -15,11 +13,7 @@ const Hero = () => {
           {/* Profile Picture */}
           <div className="mb-8 flex justify-center">
             <div className="relative">
-              <img
-                src={profilePicture}
-                alt="MD FAIYAZ HOSSAIN"
-                className="w-32 h-32 md:w-40 md:h-40 rounded-full object-cover border-4 border-accent shadow-2xl"
-              />
+              <img src={profilePicture} alt="MD FAIYAZ HOSSAIN" className="w-32 h-32 md:w-40 md:h-40 rounded-full object-cover border-4 border-accent shadow-2xl" />
               <div className="absolute -bottom-2 -right-2 bg-accent rounded-full p-2">
                 <Camera className="w-6 h-6 text-accent-foreground" />
               </div>
@@ -50,12 +44,10 @@ const Hero = () => {
 
           {/* Scroll indicator */}
           <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-            <ArrowDown className="w-6 h-6 text-accent" />
+            
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Hero;
