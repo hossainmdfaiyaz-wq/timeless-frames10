@@ -4,49 +4,49 @@ import { ExternalLink, Eye } from 'lucide-react';
 const Portfolio = () => {
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
 
-  // Sample portfolio images - in a real scenario, these would come from an API or CMS
+  // Portfolio images from your Pexels collection
   const portfolioItems = [
     {
       id: 1,
-      title: 'Golden Hour Portrait',
+      title: 'Ethereal Portrait',
       category: 'Portrait',
-      description: 'Capturing the perfect golden hour lighting for emotional depth.',
-      image: 'https://images.pexels.com/photos/1851164/pexels-photo-1851164.jpeg?auto=compress&cs=tinysrgb&w=800'
+      description: 'Capturing the delicate beauty of natural light and emotion.',
+      image: 'https://images.pexels.com/photos/30967658/pexels-photo-30967658.jpeg?auto=compress&cs=tinysrgb&w=800'
     },
     {
       id: 2,
-      title: 'Urban Architecture',
-      category: 'Architecture',
-      description: 'Modern cityscape with dramatic lighting and composition.',
-      image: 'https://images.pexels.com/photos/1546168/pexels-photo-1546168.jpeg?auto=compress&cs=tinysrgb&w=800'
+      title: 'Urban Expression',
+      category: 'Street',
+      description: 'Dynamic street photography showcasing urban life and energy.',
+      image: 'https://images.pexels.com/photos/33018195/pexels-photo-33018195.jpeg?auto=compress&cs=tinysrgb&w=800'
     },
     {
       id: 3,
-      title: 'Nature\'s Beauty',
-      category: 'Landscape',
-      description: 'Serene landscape capturing the essence of natural tranquility.',
-      image: 'https://images.pexels.com/photos/1851164/pexels-photo-1851164.jpeg?auto=compress&cs=tinysrgb&w=800'
+      title: 'Natural Beauty',
+      category: 'Portrait',
+      description: 'Intimate portrait celebrating authentic human connection.',
+      image: 'https://images.pexels.com/photos/32278938/pexels-photo-32278938.jpeg?auto=compress&cs=tinysrgb&w=800'
     },
     {
       id: 4,
-      title: 'Street Photography',
-      category: 'Street',
-      description: 'Candid moments from everyday life in the urban environment.',
-      image: 'https://images.pexels.com/photos/1851164/pexels-photo-1851164.jpeg?auto=compress&cs=tinysrgb&w=800'
+      title: 'Artistic Vision',
+      category: 'Creative',
+      description: 'Contemporary composition exploring form and artistic expression.',
+      image: 'https://images.pexels.com/photos/32615675/pexels-photo-32615675.jpeg?auto=compress&cs=tinysrgb&w=800'
     },
     {
       id: 5,
-      title: 'Artistic Expression',
-      category: 'Creative',
-      description: 'Abstract composition exploring light, shadow, and form.',
-      image: 'https://images.pexels.com/photos/1851164/pexels-photo-1851164.jpeg?auto=compress&cs=tinysrgb&w=800'
+      title: 'Golden Moment',
+      category: 'Portrait',
+      description: 'Warm lighting capturing a perfect moment of natural grace.',
+      image: 'https://images.pexels.com/photos/30205895/pexels-photo-30205895.jpeg?auto=compress&cs=tinysrgb&w=800'
     },
     {
       id: 6,
-      title: 'Emotional Portrait',
-      category: 'Portrait',
-      description: 'Intimate portrait showcasing genuine human emotion.',
-      image: 'https://images.pexels.com/photos/1851164/pexels-photo-1851164.jpeg?auto=compress&cs=tinysrgb&w=800'
+      title: 'Contemporary Style',
+      category: 'Fashion',
+      description: 'Modern fashion photography with bold composition and style.',
+      image: 'https://images.pexels.com/photos/31650086/pexels-photo-31650086.jpeg?auto=compress&cs=tinysrgb&w=800'
     }
   ];
 
