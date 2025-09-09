@@ -13,7 +13,7 @@ const Hero = () => {
           {/* Profile Picture */}
           <div className="mb-8 flex justify-center">
             <div className="relative">
-              <img src={profilePicture} alt="MD FAIYAZ HOSSAIN" className="w-32 h-32 md:w-40 md:h-40 rounded-full object-cover border-4 border-accent shadow-2xl" />
+              <img src={profilePicture} alt="MD FAIYAZ HOSSAIN" className="w-32 h-32 md:w-40 md:h-40 rounded-full object-cover object-top border-4 border-accent shadow-2xl" />
               <div className="absolute -bottom-2 -right-2 bg-accent rounded-full p-2">
                 <Camera className="w-6 h-6 text-accent-foreground" />
               </div>
