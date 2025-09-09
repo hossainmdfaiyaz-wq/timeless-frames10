@@ -1,5 +1,5 @@
 import { ArrowDown, Camera } from 'lucide-react';
-import profilePicture from '@/assets/profile-picture.jpg';
+import profilePicture from '@/assets/profile-picture-new.jpg';
 const Hero = () => {
   return <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
       {/* Background gradient elements */}
