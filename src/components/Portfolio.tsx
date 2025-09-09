@@ -8,44 +8,44 @@ const Portfolio = () => {
   const portfolioItems = [
     {
       id: 1,
-      title: 'Ethereal Portrait',
+      title: 'Silent Grace',
       category: 'Portrait',
-      description: 'Capturing the delicate beauty of natural light and emotion.',
+      description: 'A quiet capture of nature\'s elegance in stillness.',
       image: 'https://images.pexels.com/photos/30967658/pexels-photo-30967658.jpeg?auto=compress&cs=tinysrgb&w=800'
     },
     {
       id: 2,
-      title: 'Urban Expression',
-      category: 'Street',
-      description: 'Dynamic street photography showcasing urban life and energy.',
+      title: 'Feathered Melody',
+      category: 'Wildlife',
+      description: 'A glimpse of vibrant life hidden in the canopy.',
       image: 'https://images.pexels.com/photos/33018195/pexels-photo-33018195.jpeg?auto=compress&cs=tinysrgb&w=800'
     },
     {
       id: 3,
-      title: 'Natural Beauty',
-      category: 'Portrait',
-      description: 'Intimate portrait celebrating authentic human connection.',
+      title: 'Gentle Eyes',
+      category: 'Wildlife Portrait',
+      description: 'A portrait revealing the calm soul of the wild.',
       image: 'https://images.pexels.com/photos/32278938/pexels-photo-32278938.jpeg?auto=compress&cs=tinysrgb&w=800'
     },
     {
       id: 4,
-      title: 'Artistic Vision',
-      category: 'Creative',
-      description: 'Contemporary composition exploring form and artistic expression.',
+      title: 'Earthbound Wonder',
+      category: 'Wildlife',
+      description: 'Subtle beauty thriving in the forest floor.',
       image: 'https://images.pexels.com/photos/32615675/pexels-photo-32615675.jpeg?auto=compress&cs=tinysrgb&w=800'
     },
     {
       id: 5,
-      title: 'Golden Moment',
-      category: 'Portrait',
-      description: 'Warm lighting capturing a perfect moment of natural grace.',
+      title: 'Crimson Horizon',
+      category: 'Landscape',
+      description: 'The fading sun painting steel and sky in harmony.',
       image: 'https://images.pexels.com/photos/30205895/pexels-photo-30205895.jpeg?auto=compress&cs=tinysrgb&w=800'
     },
     {
       id: 6,
-      title: 'Contemporary Style',
-      category: 'Fashion',
-      description: 'Modern fashion photography with bold composition and style.',
+      title: 'Ivory Elegance',
+      category: 'Wildlife / Fine Art',
+      description: 'A rare vision of purity bathed in light and shadow.',
       image: 'https://images.pexels.com/photos/31650086/pexels-photo-31650086.jpeg?auto=compress&cs=tinysrgb&w=800'
     }
   ];
