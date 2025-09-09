@@ -1,4 +1,5 @@
 import { Camera, Palette, Zap } from 'lucide-react';
+import journeyPhoto from '@/assets/journey-photo.jpg';
 
 const About = () => {
   const skills = [
@@ -62,9 +63,11 @@ const About = () => {
               </p>
             </div>
             <div className="relative">
-              <div className="w-full h-64 bg-gradient-to-br from-accent/20 to-accent/5 rounded-2xl flex items-center justify-center">
-                <Camera className="w-24 h-24 text-accent/40" />
-              </div>
+              <img 
+                src={journeyPhoto} 
+                alt="Photography journey - capturing moments behind the scenes"
+                className="w-full h-64 object-cover rounded-2xl shadow-lg"
+              />
             </div>
           </div>
         </div>
