@@ -1,14 +1,16 @@
 import { useState } from 'react';
-import { Mail, Instagram, Twitter, ExternalLink, Send } from 'lucide-react';
+import { Mail, Instagram, Twitter, ExternalLink, Send, Loader2 } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
+import { sendContactEmail, type ContactFormData } from '@/lib/emailjs';
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<ContactFormData>({
     name: '',
     email: '',
     subject: '',
     message: ''
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
 
   const socialLinks = [
@@ -42,25 +44,40 @@ const Contact = () => {
     }
   ];
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
-    // Create mailto link
-    const subject = encodeURIComponent(formData.subject || 'Portfolio Inquiry');
-    const body = encodeURIComponent(
-      `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
-    );
-    const mailtoLink = `mailto:timelessframes35@gmail.com?subject=${subject}&body=${body}`;
-    
-    window.location.href = mailtoLink;
-    
-    toast({
-      title: "Opening email client",
-      description: "Your message will be composed in your default email application.",
-    });
+    // Validate required fields
+    if (!formData.name.trim() || !formData.email.trim() || !formData.message.trim()) {
+      toast({
+        title: "Missing Information",
+        description: "Please fill in all required fields.",
+        variant: "destructive",
+      });
+      return;
+    }
 
-    // Reset form
-    setFormData({ name: '', email: '', subject: '', message: '' });
+    setIsSubmitting(true);
+    
+    try {
+      await sendContactEmail(formData);
+      
+      toast({
+        title: "Message Sent Successfully!",
+        description: "Thank you for reaching out. I'll get back to you soon.",
+      });
+
+      // Reset form only after successful submission
+      setFormData({ name: '', email: '', subject: '', message: '' });
+    } catch (error) {
+      toast({
+        title: "Failed to Send Message",
+        description: "There was an error sending your message. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -150,10 +167,20 @@ const Contact = () => {
               
               <button
                 type="submit"
-                className="btn-accent w-full flex items-center justify-center gap-2"
+                disabled={isSubmitting}
+                className="btn-accent w-full flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                <Send className="w-5 h-5" />
-                Send Message
+                {isSubmitting ? (
+                  <>
+                    <Loader2 className="w-5 h-5 animate-spin" />
+                    Sending...
+                  </>
+                ) : (
+                  <>
+                    <Send className="w-5 h-5" />
+                    Send Message
+                  </>
+                )}
               </button>
             </form>
           </div>
